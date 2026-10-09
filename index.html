@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <main class="container">
+            <header class="page-header">
+                <h1>Student Registration</h1>
+                <p class="subtitle">Fill in your details to create your student registration record.</p>
+            </header>
+
+            <form id="registrationForm" novalidate>
+                <section class="form-section">
+                    <h2>Personal Information</h2>
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="studentId">Student ID</label>
+                            <input
+                                id="studentId"
+                                name="studentId"
+                                type="text"
+                                placeholder="e.g. 2026-0001"
+                                data-label="Student ID"
+                                data-required="true"
+                                autocomplete="off"
+                            >
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="field">
+                            <label for="fullName">Full Name</label>
+                            <input
+                                id="fullName"
+                                name="fullName"
+                                type="text"
+                                placeholder="Enter your full name"
+                                data-label="Full Name"
+                                data-required="true"
+                                autocomplete="name"
+                            >
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email Address</label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                placeholder="name@example.com"
+                                data-label="Email Address"
+                                data-required="true"
+                                autocomplete="email"
+                            >
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                id="phone"
+                                name="phone"
+                                type="tel"
+                                placeholder="09XXXXXXXXX"
+                                data-label="Phone Number"
+                                data-required="true"
+                                autocomplete="tel"
+                            >
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="field">
+                            <label for="dob">Date of Birth</label>
+                            <input
+                                id="dob"
+                                name="dob"
+                                type="date"
+                                data-label="Date of Birth"
+                                data-required="true"
+                            >
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="field">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" data-label="Gender" data-required="true">
+                                <option value="">Select gender</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Prefer not to say">Prefer not to say</option>
+                            </select>
+                            <small class="error-message"></small>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Academic Information</h2>
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="program">Program</label>
+                            <select id="program" name="program" data-label="Program" data-required="true">
+                                <option value="">Select your program</option>
+                                <option value="BSIT">Bachelor of Science in Information Technology</option>
+                                <option value="BSCS">Bachelor of Science in Computer Science</option>
+                                <option value="BSBA">Bachelor of Science in Business Administration</option>
+                                <option value="BSED">Bachelor of Secondary Education</option>
+                                <option value="BEED">Bachelor of Elementary Education</option>
+                                <option value="BSHM">Bachelor of Science in Hospitality Management</option>
+                            </select>
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="field">
+                            <label for="yearLevel">Year Level</label>
+                            <select id="yearLevel" name="yearLevel" data-label="Year Level" data-required="true">
+                                <option value="">Select year level</option>
+                                <option value="1st Year">1st Year</option>
+                                <option value="2nd Year">2nd Year</option>
+                                <option value="3rd Year">3rd Year</option>
+                                <option value="4th Year">4th Year</option>
+                                <option value="5th Year">5th Year</option>
+                            </select>
+                            <small class="error-message"></small>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Account and Address</h2>
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="password">Password</label>
+                            <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                placeholder="At least 8 characters"
+                                data-label="Password"
+                                data-required="true"
+                                autocomplete="new-password"
+                            >
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="field">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                type="password"
+                                placeholder="Enter password again"
+                                data-label="Confirm Password"
+                                data-required="true"
+                                autocomplete="new-password"
+                            >
+                            <small class="error-message"></small>
+                        </div>
+
+                        <div class="field full-width">
+                            <button type="button" id="togglePassword" class="text-button" aria-pressed="false">
+                                Show passwords
+                            </button>
+                        </div>
+
+                        <div class="field full-width">
+                            <label for="address">Complete Address</label>
+                            <textarea
+                                id="address"
+                                name="address"
+                                rows="3"
+                                placeholder="House number, street, barangay, city/municipality"
+                                data-label="Complete Address"
+                                data-required="true"
+                                autocomplete="street-address"
+                            ></textarea>
+                            <small class="error-message"></small>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="agreement field">
+                    <label class="checkbox-label" for="agreement">
+                        <input id="agreement" name="agreement" type="checkbox" data-label="Agreement" data-required="true">
+                        <span>I confirm that the information I provided is correct.</span>
+                    </label>
+                    <small class="error-message"></small>
+                </div>
+
+                <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+
+                <div class="actions">
+                    <button type="reset" class="button button-secondary">Reset Form</button>
+                    <button type="submit" class="button button-primary">Submit Registration</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
